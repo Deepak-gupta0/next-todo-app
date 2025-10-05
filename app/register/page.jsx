@@ -6,9 +6,9 @@ import Link from "next/link";
 
 export default function RegisterPage() {
   const router = useRouter();
-  const [name, setName] = useState("ProCodrr");
-  const [email, setEmail] = useState("procodrr@gmail.com");
-  const [password, setPassword] = useState("123456");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -42,6 +42,7 @@ export default function RegisterPage() {
               type="text"
               className="mt-1 w-full px-4 py-2 border rounded-md bg-white dark:bg-gray-900 dark:text-white"
               value={name}
+              placeholder="name123"
               onChange={(e) => setName(e.target.value)}
               required
             />
@@ -54,6 +55,7 @@ export default function RegisterPage() {
               type="email"
               className="mt-1 w-full px-4 py-2 border rounded-md bg-white dark:bg-gray-900 dark:text-white"
               value={email}
+              placeholder="example@gmail.com"
               onChange={(e) => setEmail(e.target.value)}
               required
             />
@@ -66,6 +68,7 @@ export default function RegisterPage() {
               type="password"
               className="mt-1 w-full px-4 py-2 border rounded-md bg-white dark:bg-gray-900 dark:text-white"
               value={password}
+              placeholder="password"
               onChange={(e) => setPassword(e.target.value)}
               required
             />
